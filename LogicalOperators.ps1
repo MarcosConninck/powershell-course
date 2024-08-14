@@ -1,0 +1,13 @@
+'Give me your name'
+$Name = Read-Host
+
+'give me your password'
+$PasswWord = Read-Host
+
+# Obvious isn't safe to do this
+if ($Name -eq 'Marco' -and $PasswWord -eq '123') {
+    'Loggin in ' + $Name
+}
+else {
+    'wrong password or name'
+}
