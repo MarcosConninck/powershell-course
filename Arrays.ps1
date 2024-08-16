@@ -5,6 +5,9 @@ $Array += 'Pete'
 $Array += 'Linda'
 $Array += 'John'
 
-'you are great! ' + $Array[-1]
+# 'you are great! ' + $Array[-1]
 
-$Array.GetType()
+foreach ($Item in $Array) {
+    'That is a nice name ' + $Item
+}
+
