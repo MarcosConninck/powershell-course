@@ -44,7 +44,7 @@ function Get-ValidTime {
 # Function to confirm shutdown
 function ShutDownConfirmation {
     param (
-        [string]$Prompt = "Confirm? (y/n)"
+        [string]$Prompt = "Confirm? (y/n) or (leave)"
     )
         
     do {
@@ -52,7 +52,8 @@ function ShutDownConfirmation {
         switch ($Confirmation.ToLower()) {
             "y" { return $true }
             "n" { return $false }
-            Default { Write-Host "You must chose (y/n)" -ForegroundColor Red }
+            "leave" { exit }
+            Default { Write-Host "You must chose (y/n) or (leave)" -ForegroundColor Red }
         }
         
     } while ($true)
